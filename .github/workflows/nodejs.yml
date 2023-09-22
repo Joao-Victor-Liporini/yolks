@@ -42,4 +42,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/Joao-Victor-Liporini/yolks:nodejs_${{ matrix.tag }}
+            ghcr.io/joao-victor-liporini/yolks:nodejs_${{ matrix.tag }}
