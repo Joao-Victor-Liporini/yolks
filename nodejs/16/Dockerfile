@@ -8,6 +8,12 @@ RUN         apt update \
 
 RUN         npm install npm@9.8.1 typescript ts-node @types/node --location=global
 
+RUN 		mkdir -p /var/www/sessions
+
+RUN 		echo 'session.save_path = "/var/www/sessions"' >> /usr/local/etc/php/php.ini
+
+RUN 		chmod 733 /var/www/sessions
+
 USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
